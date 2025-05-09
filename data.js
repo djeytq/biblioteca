@@ -62,7 +62,7 @@ const books = [
     }
 ];
 async function fetchBooks() {
-const data= await fetch("http://localhost:8081/books")
+const data= await fetch("https://biblioteca-api-zeta.vercel.app/books")
     .then(response => response.json())
     .then(data => {
         // Processar os dados recebidos

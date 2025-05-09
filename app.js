@@ -218,7 +218,7 @@ function addEventListeners() {
         const description = document.getElementById('bookDescription').value;
         
     try {
-        const response = await fetch("http://localhost:8081/book/insert", {
+        const response = await fetch("https://biblioteca-api-zeta.vercel.app/book/insert", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -258,7 +258,7 @@ function addEventListeners() {
         const password = document.getElementById('loginPassword').value;
 
         try {
-            const response = await fetch("http://localhost:8081/session", {
+            const response = await fetch("https://biblioteca-api-zeta.vercel.app/session", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -298,7 +298,7 @@ function addEventListeners() {
             return;
         }
         try {
-            const response = await fetch("http://localhost:8081/session/register", {
+            const response = await fetch("https://biblioteca-api-zeta.vercel.app/session/register", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -336,7 +336,7 @@ booksGrid.addEventListener('click', async function (e) {
 
 async function deleteBook(bookId) {
     try {
-        const response = await fetch(`http://localhost:8081/book/delete/${bookId}`, {
+        const response = await fetch(`https://biblioteca-api-zeta.vercel.app/book/delete/${bookId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('@book:token')}`
